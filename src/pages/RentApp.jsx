@@ -29,7 +29,7 @@ const RentApp = () => {
 
   const fetchRents = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/rents');
+      const response = await axios.get('https://rentbackend-vb25.onrender.com/api/rents');
       setRents(response.data);
     } catch (error) {
       toast.error('Failed to fetch rents');
@@ -60,7 +60,7 @@ const RentApp = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/api/rents', formData);
+      await axios.post('https://rentbackend-vb25.onrender.com/api/rents', formData);
       toast.success('Rent added successfully!');
       setShowModal(false);
       setFormData({
