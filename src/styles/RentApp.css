@@ -1,0 +1,249 @@
+/* RentApp.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.rent-app-container {
+  padding: 2rem;
+  font-family: "Poppins", sans-serif;
+  /* background-color: #f8f9fa; */
+  min-height: 100vh;
+}
+
+.room-details {
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  color: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+}
+
+.room-details h2 {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+}
+
+.room-details p {
+  margin-bottom: 0.3rem;
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.rent-table {
+  margin-top: 2rem;
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.rent-table thead th {
+  background-color: #2575fc;
+  color: white;
+  font-weight: 500;
+  padding: 1rem;
+  border: none;
+}
+
+.rent-table tbody td {
+  padding: 1rem;
+  vertical-align: middle;
+  border-top: 1px solid #f1f1f1;
+}
+
+.rent-table tbody tr:hover {
+  background-color: rgba(37, 117, 252, 0.05);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 0.8rem;
+  border-radius: 50px;
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+
+.badge.bg-success {
+  background-color: #28a745 !important;
+}
+
+.badge.bg-warning {
+  background-color: #ffc107 !important;
+}
+
+.btn-primary {
+  background-color: #2575fc;
+  border: none;
+  padding: 0.6rem 1.5rem;
+  font-weight: 500;
+  box-shadow: 0 4px 10px rgba(37, 117, 252, 0.3);
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #1a5fd4;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(37, 117, 252, 0.4);
+}
+
+.modal-content {
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.modal-header {
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  color: white;
+  border-radius: 12px 12px 0 0 !important;
+  padding: 1.5rem;
+}
+
+.modal-title {
+  font-weight: 600;
+}
+
+.modal-body {
+  padding: 2rem;
+}
+
+.form-control {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #2575fc;
+  box-shadow: 0 0 0 0.25rem rgba(37, 117, 252, 0.25);
+}
+
+.form-label {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .rent-app-container {
+    padding: 1.5rem;
+  }
+  
+  .room-details {
+    padding: 1.2rem;
+  }
+  
+  .room-details h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .room-details{
+    width: 100%;
+  }
+  .rent-table {
+    font-size: 0.9rem;
+  }
+  
+  .table-responsive {
+    border-radius: 8px;
+  }
+  
+  .rent-table thead th,
+  .rent-table tbody td {
+    padding: 0.8rem;
+  }
+  
+  .room-details {
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .rent-app-container {
+    padding: 1rem;
+  }
+  
+  .d-flex {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .d-flex button {
+    margin-top: 1rem;
+    width: 100%;
+  }
+  
+  .modal-body {
+    padding: 1.5rem;
+  }
+  
+  .form-control {
+    padding: 0.6rem 0.8rem;
+  }
+  
+  .rent-table thead th,
+  .rent-table tbody td {
+    padding: 0.6rem;
+    font-size: 0.8rem;
+  }
+  
+  .badge {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.75rem;
+  }
+}
+
+/* Animation for table rows */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.rent-table tbody tr {
+  animation: fadeIn 0.3s ease forwards;
+  opacity: 0;
+}
+
+.rent-table tbody tr:nth-child(1) { animation-delay: 0.1s; }
+.rent-table tbody tr:nth-child(2) { animation-delay: 0.2s; }
+.rent-table tbody tr:nth-child(3) { animation-delay: 0.3s; }
+.rent-table tbody tr:nth-child(4) { animation-delay: 0.4s; }
+/* Add more if needed */
+
+
+.electricty-group{
+  display: flex;
+  gap: 10px;
+}
+
+/* Custom Spinner Styles */
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 200px; /* Adjust based on your table height */
+}
+
+.spinner-border {
+  width: 3rem;
+  height: 3rem;
+  color: #4a6bff; /* Custom color - change as needed */
+  border-width: 0.25em;
+}
+
+.loading-text {
+  margin-top: 1rem;
+  color: #6c757d;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+
+.selectstatus{
+  width: 50%;
+}
