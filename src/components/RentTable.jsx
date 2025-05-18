@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Table, Spinner, Pagination } from 'react-bootstrap';
 import { FaCheck, FaTimes } from 'react-icons/fa';
+import loaderr from '../assets/spinner.gif'
 
 const RentTable = ({ rents, isLoading }) => {
   // Pagination state
@@ -28,7 +29,9 @@ const RentTable = ({ rents, isLoading }) => {
         <Spinner animation="border" role="status">
           <span className="visually-hidden">Loading...</span>
         </Spinner>
-        <p className="mt-2">Loading rent data...</p>
+        <p className="mt-2">
+          <img src={loaderr} alt="Loading rend data" />
+        </p>
       </div>
     );
   }
@@ -36,7 +39,9 @@ const RentTable = ({ rents, isLoading }) => {
   if (!rents || rents.length === 0) {
     return (
       <div className="text-center my-5">
-        <p>No rent data available</p>
+          <img src={loaderr} alt="Loading rend data"  height={80}/><br />
+          <p className='rent-data-loadinggg'>Loading rend data...</p>
+
       </div>
     );
   }
@@ -52,7 +57,7 @@ const RentTable = ({ rents, isLoading }) => {
             <th>Room Rent</th>
             <th>Total Paid</th>
             <th>Status</th>
-            <th>Pending Amount</th>
+            <th>Pending </th>
             <th>Remarks</th>
           </tr>
         </thead>

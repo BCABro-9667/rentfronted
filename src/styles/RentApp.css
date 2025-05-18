@@ -37,6 +37,9 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
+.rent-data-loadinggg{
+  margin-top: 10px;
+}
 .rent-table thead th {
   background-color: #2575fc;
   color: white;
