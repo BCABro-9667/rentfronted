@@ -124,13 +124,13 @@ const RentModal = ({
           </Form.Group>
 
           <div className="d-flex justify-content-end">
-            <Button
+            {/* <Button
               variant="secondary"
               onClick={() => setShowModal(false)}
               className="me-2"
             >
               Cancel
-            </Button>
+            </Button> */}
             <Button variant="primary" type="submit">
               Submit
             </Button>

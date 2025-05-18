@@ -52,7 +52,7 @@ const RentTable = ({ rents, isLoading }) => {
         <thead>
           <tr>
             <th>Date</th>
-            <th>Electricity Unit</th>
+            <th>Electricity Units</th>
             <th>Electricity Bill</th>
             <th>Room Rent</th>
             <th>Total Paid</th>
